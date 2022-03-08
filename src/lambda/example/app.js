@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.handler = void 0;
+const DEPLOY_TIME = process.env.DEPLOY_TIME;
+console.log(`I was deployed at: ${DEPLOY_TIME}`);
+async function handler(event) {
+    console.debug("Received event: ", event);
+    console.log("### Environment:", JSON.stringify(process.env));
+    console.log("### Event:", event);
+    return {
+        statusCode: 200,
+        body: `Hello from aws lambda , Deploy_time: ${DEPLOY_TIME}`
+    };
+}
+exports.handler = handler;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYXBwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLE1BQU0sV0FBVyxHQUFHLE9BQU8sQ0FBQyxHQUFHLENBQUMsV0FBVyxDQUFDO0FBQzVDLE9BQU8sQ0FBQyxHQUFHLENBQUMsc0JBQXNCLFdBQVcsRUFBRSxDQUFDLENBQUM7QUFFMUMsS0FBSyxVQUFVLE9BQU8sQ0FBRSxLQUFVO0lBQ3JDLE9BQU8sQ0FBQyxLQUFLLENBQUMsa0JBQWtCLEVBQUUsS0FBSyxDQUFDLENBQUM7SUFDekMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxrQkFBa0IsRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzdELE9BQU8sQ0FBQyxHQUFHLENBQUMsWUFBWSxFQUFFLEtBQUssQ0FBQyxDQUFDO0lBQ2pDLE9BQU87UUFDSCxVQUFVLEVBQUUsR0FBRztRQUNmLElBQUksRUFBRSx3Q0FBd0MsV0FBVyxFQUFFO0tBQzlELENBQUM7QUFDTixDQUFDO0FBUkQsMEJBUUMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBERVBMT1lfVElNRSA9IHByb2Nlc3MuZW52LkRFUExPWV9USU1FO1xuY29uc29sZS5sb2coYEkgd2FzIGRlcGxveWVkIGF0OiAke0RFUExPWV9USU1FfWApO1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gaGFuZGxlciAoZXZlbnQ6IGFueSkge1xuICAgIGNvbnNvbGUuZGVidWcoXCJSZWNlaXZlZCBldmVudDogXCIsIGV2ZW50KTtcbiAgICBjb25zb2xlLmxvZyhcIiMjIyBFbnZpcm9ubWVudDpcIiwgSlNPTi5zdHJpbmdpZnkocHJvY2Vzcy5lbnYpKTtcbiAgICBjb25zb2xlLmxvZyhcIiMjIyBFdmVudDpcIiwgZXZlbnQpO1xuICAgIHJldHVybiB7XG4gICAgICAgIHN0YXR1c0NvZGU6IDIwMCxcbiAgICAgICAgYm9keTogYEhlbGxvIGZyb20gYXdzIGxhbWJkYSAsIERlcGxveV90aW1lOiAke0RFUExPWV9USU1FfWBcbiAgICB9O1xufSJdfQ==

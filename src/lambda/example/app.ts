@@ -7,6 +7,9 @@ export async function handler (event: any) {
     console.log("### Event:", event);
     return {
         statusCode: 200,
-        body: `Hello from aws lambda , Deploy_time: ${DEPLOY_TIME}`
+        body: {
+            'Deploy_time': DEPLOY_TIME,
+            'Environment': JSON.stringify(process.env),
+        }
     };
 }
